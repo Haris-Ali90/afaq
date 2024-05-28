@@ -20,7 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('admin/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('admin.dashboard');
-Route::get('admin/folder', [App\Http\Controllers\FolderController::class, 'index'])->name('admin.folder.index');
+Route::get('admin/order_by_form', [App\Http\Controllers\OrderController::class, 'orderCreationByForm'])->name('admin.orders.form');
 Route::post('admin/folder/store', [App\Http\Controllers\FolderController::class, 'store'])->name('admin.folder.store');
 Route::get('admin/folder/images/{folder}', [App\Http\Controllers\FolderController::class, 'folderImage'])->name('admin.folder.images.index');
 Route::post('admin/folder/images/store', [App\Http\Controllers\FolderController::class, 'submitFolderImages'])->name('admin.folder.images.store');
