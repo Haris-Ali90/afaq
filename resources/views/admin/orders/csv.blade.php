@@ -28,7 +28,7 @@
                     <div class="card-body pt-9 pb-0">
                         <div class="d-flex flex-wrap flex-sm-nowrap mb-6">
                             <div class="flex-grow-1">
-                                <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                                <div class="justify-content-between align-items-start flex-wrap mb-2">
                                     <div class="d-flex flex-column">
                                         <div class="d-flex align-items-center mb-1">
                                             <a href="#"
@@ -46,30 +46,64 @@
                                 </div>
                                 <div class="d-flex flex-wrap justify-content-start">
                                     <div class="d-flex flex-wrap">
-                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <div class="fs-4 fw-bolder"></div>
-                                            </div>
-                                            <div class="fw-bold fs-6 text-gray-400">Due Date</div>
+{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+{{--                                            <div class="d-flex align-items-center">--}}
+{{--                                                <div class="fs-4 fw-bolder"></div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="fw-bold fs-6 text-gray-400">Due Date</div>--}}
+{{--                                        </div>--}}
+                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
+                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
+                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
+                                                </span>
+                                            </label>
                                         </div>
 
-                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2"></span>
-                                                <div class="fs-4 fw-bolder" data-kt-countup="true" data-kt-countup-value="5">0</div>
-                                            </div>
-                                            <div class="fw-bold fs-6 text-gray-400">Images</div>
+                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
+                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
+                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
+                                                </span>
+                                            </label>
                                         </div>
 
-                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
-                                            <div class="d-flex align-items-center">
-                                                <span class="svg-icon svg-icon-3 svg-icon-success me-2"></span>
-                                                <div class="fs-4 fw-bolder" data-kt-countup="true"
-                                                     data-kt-countup-value="15000" data-kt-countup-prefix="$">0
-                                                </div>
-                                            </div>
-                                            <div class="fw-bold fs-6 text-gray-400">Budget Spent</div>
+                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
+                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
+                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
+                                                </span>
+                                            </label>
                                         </div>
+{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+{{--                                            <div class="d-flex align-items-center">--}}
+{{--                                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2"></span>--}}
+{{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true" data-kt-countup-value="5">0</div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="fw-bold fs-6 text-gray-400">Images</div>--}}
+{{--                                        </div>--}}
+
+{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+{{--                                            <div class="d-flex align-items-center">--}}
+{{--                                                <span class="svg-icon svg-icon-3 svg-icon-success me-2"></span>--}}
+{{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true"--}}
+{{--                                                     data-kt-countup-value="15000" data-kt-countup-prefix="$">0--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                            <div class="fw-bold fs-6 text-gray-400">Budget Spent</div>--}}
+{{--                                        </div>--}}
 
                                     </div>
                                 </div>
@@ -97,40 +131,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <!--begin::Modal header-->
-                            <!--begin::Modal body-->
-                            <div class="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
-                                <form id="images-form" class="form" enctype="multipart/form-data">
-                                    <div class="mb-13 text-center">
-                                        <h1 class="mb-3">Image Upload</h1>
-                                        <div class="text-muted fw-bold fs-5">
-                                            <a href="#" class="fw-bolder link-primary">Project Guidelines</a>.
-                                        </div>
-                                    </div>
 
-                                    <div class="fv-row mb-7">
-                                        <!--begin::Label-->
-                                        <label class="required fw-bold fs-6 mb-2">Upload File Here</label>
-                                        <!--end::Label-->
-                                        <!--begin::Input-->
-                                        <input type="hidden" value="" id="folder_id" name="folder_id">
-                                        <input type="file" name="file" class="form-control form-control-solid mb-3 mb-lg-0">
-                                        <!--end::Input-->
-                                    </div>
-
-                                    <div class="text-center">
-                                        <button type="reset" id="kt_modal_new_target_cancel" class="btn btn-light me-3">
-                                            Cancel
-                                        </button>
-                                        <button type="button" id="kt_modal_new_target_submit" class="btn btn-primary">
-                                            <span class="indicator-label" id="img-sbmt-btn">Submit</span>
-                                            <span class="indicator-progress">Please wait...
-                                                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,9 +153,30 @@
                                     <div class="" id="images-div">
 
                                         <!--begin::Wrapper-->
-                                        <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 gy-10">
+                                        <div class="row">
                                             <!--begin::Item-->
-
+                                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                                <!--begin::Card-->
+                                                <a href="#" class="text-hover-primary fs-5 fw-bolder mb-2" data-bs-toggle="modal"
+                                                   data-bs-target="#kt_modal_share_earn">
+                                                    <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
+                                                        <img src="{{ asset('assets/media/svg/files/upload.svg') }}" class="" alt=""/>
+                                                        Create New Folder
+                                                    </div>
+                                                </a>
+                                                <!--end::Card-->
+                                            </div>
+                                            <div class="col-md-6 col-lg-6 col-xl-6">
+                                                <!--begin::Card-->
+                                                <a href="#" class="text-hover-primary fs-5 fw-bolder mb-2" data-bs-toggle="modal"
+                                                   data-bs-target="#kt_modal_share_earn">
+                                                    <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
+                                                        <img src="{{ asset('assets/media/svg/files/upload.svg') }}" class="" alt=""/>
+                                                        Create New Folder
+                                                    </div>
+                                                </a>
+                                                <!--end::Card-->
+                                            </div>
 
                                         </div>
                                         <!--end::Wrapper-->
@@ -166,43 +188,7 @@
                             <!--end::About card-->
                         </div>
                         <!--end::Row-->
-                        <!--begin::Pagination-->
-                        <div class="d-flex flex-stack flex-wrap pt-10">
-                            <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
-                            <!--begin::Pages-->
-                            <ul class="pagination">
-                                <li class="page-item previous">
-                                    <a href="#" class="page-link">
-                                        <i class="previous"></i>
-                                    </a>
-                                </li>
-                                <li class="page-item active">
-                                    <a href="#" class="page-link">1</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">2</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">3</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">4</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">5</a>
-                                </li>
-                                <li class="page-item">
-                                    <a href="#" class="page-link">6</a>
-                                </li>
-                                <li class="page-item next">
-                                    <a href="#" class="page-link">
-                                        <i class="next"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                            <!--end::Pages-->
-                        </div>
-                        <!--end::Pagination-->
+
                     </div>
                     <!--end::Tab pane-->
 
