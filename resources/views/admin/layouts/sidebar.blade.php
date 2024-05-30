@@ -116,6 +116,12 @@
 														</span>
                                     <span class="menu-title">Create Order By Form</span>
                                 </a>
+                                <a class="menu-link" href="{{ route('admin.orders.csv') }}">
+														<span class="menu-bullet">
+															<span class="bullet bullet-dot"></span>
+														</span>
+                                    <span class="menu-title">Create Order By CSV</span>
+                                </a>
                             </div>
                         </div>
 

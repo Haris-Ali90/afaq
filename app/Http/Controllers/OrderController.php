@@ -2,8 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Country;
 use App\Models\Folder;
 use App\Models\FolderImage;
+use App\Models\Location;
+use App\Models\OrderCategory;
+use App\Models\Sprint;
+use App\Models\SprintContact;
+use App\Models\Task;
 use DateInterval;
 use DateTime;
 use Illuminate\Http\Request;
@@ -32,26 +38,86 @@ class OrderController extends Controller
         return view('admin.orders.form');
     }
 
-    public function store(Request $request)
+    public function orderCreationFormStore(Request $request)
     {
-        $currentDate = new DateTime(); // Current date and time
-        $currentDate->add(new DateInterval('P20D')); // Add 20 days
+        $user = auth()->user();
+        $category = OrderCategory::create(['name' => $request->category]);
 
-        $newDate = $currentDate->format('Y-m-d');
-        $folder = Folder::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'link' => $request->link,
-            'folder_type' => 'free',
-            'folder_limit' => 20,
-            'due_date' => $newDate,
+        $sprintContact = SprintContact::create([
+            'name' => $request->fname .' '. $request->lname,
+            'phone' => $request->phone,
+            'email' => $request->email,
         ]);
+
+        $location = Location::create([
+            'address' => $request->address,
+            'city_id' => 1,
+            'state_id' => 1,
+            'country_id' => 1,
+        ]);
+        $sprint = [
+            'creator_id' => $user->id,
+            'creator_type' => 'vendor',
+            'vehicle_id' => 3,
+            'status_id' => 61,
+        ];
+        $sprint = Sprint::create($sprint);
+
+        $pickupTask = [
+            'sprint_id' => $sprint->id,
+            'ordinal' => 1,
+            'type' => 'pickup',
+            'location_id' => $location->id,
+            'contact_id' => $sprintContact->id,
+            'status_id' => 61,
+        ];
+        Task::create($pickupTask);
+
+        $sprintContactDrop = SprintContact::create([
+            'name' => $request->d_fname .' '. $request->d_lname,
+            'phone' => $request->d_phone,
+            'email' => $request->d_email,
+        ]);
+
+        $locationDrop = Location::create([
+            'address' => $request->d_address,
+            'city_id' => 1,
+            'state_id' => 1,
+            'country_id' => 1,
+        ]);
+
+        $dropOffTask = [
+            'sprint_id' => $sprint->id,
+            'ordinal' => 2,
+            'type' => 'dropoff',
+            'location_id' => $locationDrop->id,
+            'contact_id' => $sprintContactDrop->id,
+            'status_id' => 61,
+        ];
+        Task::create($dropOffTask);
+
+//        return redirect()->route('rfq.create')->with('success', 'order created successfully');
     }
 
-    public function folderImage(Folder $folder)
+    public function orderCreationByCSV()
     {
-        $images = FolderImage::where('folder_id', $folder->id)->get();
-        return view('admin.folder.folder_images.index', compact('folder', 'images'));
+        return view('admin.orders.csv');
+    }
+
+    public function getCountryIdOrCreation($countryName)
+    {
+        $country = Country::where('name', $countryName)->orWhere('code', $countryName)->first();
+        if($country != null){
+            $countryId =  $country->id;
+        }
+
+        if($country == null){
+            $country = Country::create([
+                'name' => $countryName,
+            ]);
+            $countryId = $country->id;
+        }
+        return $countryId;
     }
 
     public function submitFolderImages(Request $request)
