@@ -23,6 +23,8 @@ Route::get('admin/dashboard', [App\Http\Controllers\HomeController::class, 'inde
 Route::get('admin/order_by_form', [App\Http\Controllers\OrderController::class, 'orderCreationByForm'])->name('admin.orders.form');
 Route::post('admin/order/store', [App\Http\Controllers\OrderController::class, 'orderCreationFormStore'])->name('admin.orders.form.store');
 Route::get('admin/order_by_csv', [App\Http\Controllers\OrderController::class, 'orderCreationByCSV'])->name('admin.orders.csv');
+Route::post('admin/order/csv/store', [App\Http\Controllers\OrderController::class, 'orderCreationCSVStore'])->name('admin.orders.csv.store');
+Route::post('admin/order/csv/process', [App\Http\Controllers\OrderController::class, 'orderCreationCSVProcess'])->name('admin.orders.csv.process');
 
 Route::post('admin/folder/store', [App\Http\Controllers\FolderController::class, 'store'])->name('admin.folder.store');
 Route::get('admin/folder/images/{folder}', [App\Http\Controllers\FolderController::class, 'folderImage'])->name('admin.folder.images.index');

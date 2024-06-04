@@ -39,71 +39,104 @@
                                             images to get view and shareable to multiple user
                                         </div>
                                         <div class="h-8px bg-light rounded mb-3">
-                                            <div class="bg-success rounded h-8px" role="progressbar" style="width: 88%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="bg-success rounded h-8px" role="progressbar" style="width: 88%;"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
                                 </div>
-                                <div class="d-flex flex-wrap justify-content-start">
+                                <div class="flex-wrap justify-content-start">
                                     <div class="d-flex flex-wrap">
-{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
-{{--                                            <div class="d-flex align-items-center">--}}
-{{--                                                <div class="fs-4 fw-bolder"></div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="fw-bold fs-6 text-gray-400">Due Date</div>--}}
-{{--                                        </div>--}}
-                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
-                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
+                                        {{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+                                        {{--                                            <div class="d-flex align-items-center">--}}
+                                        {{--                                                <div class="fs-4 fw-bolder"></div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                            <div class="fw-bold fs-6 text-gray-400">Due Date</div>--}}
+                                        {{--                                        </div>--}}
+                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active"
+                                                data-kt-button="true">
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1"
+                                                           checked="checked">
                                                 </span>
                                                 <span class="ms-5">
                                                     <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
-                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Upload Orders</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1"></div>
+
+                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
+                                                data-kt-button="true">
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1"
+                                                           checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step Two</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Validate Orders</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1"></div>
+
+                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
+                                                data-kt-button="true">
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1"
+                                                           checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step Three</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Processing Orders</span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="col-md-1"></div>
+
+                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                            <label
+                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
+                                                data-kt-button="true">
+                                                <span
+                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1"
+                                                           checked="checked">
+                                                </span>
+                                                <span class="ms-5">
+                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step Four</span>
+                                                    <span class="fw-bold fs-7 text-gray-600">Confirmation Orders</span>
                                                 </span>
                                             </label>
                                         </div>
 
-                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
-                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
-                                                </span>
-                                                <span class="ms-5">
-                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
-                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
-                                                </span>
-                                            </label>
-                                        </div>
+                                        {{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+                                        {{--                                            <div class="d-flex align-items-center">--}}
+                                        {{--                                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2"></span>--}}
+                                        {{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true" data-kt-countup-value="5">0</div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                            <div class="fw-bold fs-6 text-gray-400">Images</div>--}}
+                                        {{--                                        </div>--}}
 
-                                        <div class="col-md-4 col-lg-4 col-xxl-4 pr-2">
-                                            <label class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active" data-kt-button="true">
-                                                <span class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1" checked="checked">
-                                                </span>
-                                                <span class="ms-5">
-                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
-                                                    <span class="fw-bold fs-7 text-gray-600">Withdraw money to your bank account per transaction under $50,000 budget</span>
-                                                </span>
-                                            </label>
-                                        </div>
-{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
-{{--                                            <div class="d-flex align-items-center">--}}
-{{--                                                <span class="svg-icon svg-icon-3 svg-icon-danger me-2"></span>--}}
-{{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true" data-kt-countup-value="5">0</div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="fw-bold fs-6 text-gray-400">Images</div>--}}
-{{--                                        </div>--}}
-
-{{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
-{{--                                            <div class="d-flex align-items-center">--}}
-{{--                                                <span class="svg-icon svg-icon-3 svg-icon-success me-2"></span>--}}
-{{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true"--}}
-{{--                                                     data-kt-countup-value="15000" data-kt-countup-prefix="$">0--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                            <div class="fw-bold fs-6 text-gray-400">Budget Spent</div>--}}
-{{--                                        </div>--}}
+                                        {{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
+                                        {{--                                            <div class="d-flex align-items-center">--}}
+                                        {{--                                                <span class="svg-icon svg-icon-3 svg-icon-success me-2"></span>--}}
+                                        {{--                                                <div class="fs-4 fw-bolder" data-kt-countup="true"--}}
+                                        {{--                                                     data-kt-countup-value="15000" data-kt-countup-prefix="$">0--}}
+                                        {{--                                                </div>--}}
+                                        {{--                                            </div>--}}
+                                        {{--                                            <div class="fw-bold fs-6 text-gray-400">Budget Spent</div>--}}
+                                        {{--                                        </div>--}}
 
                                     </div>
                                 </div>
@@ -121,7 +154,8 @@
                             <div class="modal-header pb-0 border-0 justify-content-end">
                                 <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
                                     <span class="svg-icon svg-icon-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none">
                                             <rect opacity="0.5" x="6" y="17.3137" width="16" height="2"
                                                   rx="1" transform="rotate(-45 6 17.3137)"
                                                   fill="black"/>
@@ -138,60 +172,75 @@
                 <!--end::Modal - New Target-->
 
 
-
                 <!--begin::Tab Content-->
                 <div class="tab-content">
-                    <!--begin::Tab pane-->
                     <div id="kt_project_users_card_pane" class="tab-pane fade show active">
-                        <!--begin::Row-->
                         <div id="kt_content_container" class="container-xxl">
-                            <!--begin::About card-->
                             <div class="card">
-                                <!--begin::Body-->
                                 <div class="card-body">
-                                    <!--begin::Team-->
                                     <div class="" id="images-div">
+                                        <form id="csv-order-form" class="form" enctype="multipart/form-data">
+                                            <div class="row">
+                                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                                    <label for="csvFile" class="text-hover-primary fs-5 fw-bolder col-md-12 col-lg-12 col-xl-12">
+                                                        <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
+                                                            <input type="file" id="csvFile" accept=".csv" style="display: none;">
+                                                            <i class="fa fa-upload mb-4" aria-hidden="true" style="font-size: xxx-large;"></i>
+                                                            Upload CSV File Here
+                                                        </div>
+                                                    </label>
+                                                </div>
 
-                                        <!--begin::Wrapper-->
-                                        <div class="row">
-                                            <!--begin::Item-->
-                                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                                <!--begin::Card-->
-                                                <a href="#" class="text-hover-primary fs-5 fw-bolder mb-2" data-bs-toggle="modal"
-                                                   data-bs-target="#kt_modal_share_earn">
-                                                    <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
-                                                        <img src="{{ asset('assets/media/svg/files/upload.svg') }}" class="" alt=""/>
-                                                        Create New Folder
-                                                    </div>
-                                                </a>
-                                                <!--end::Card-->
+                                                <div class="col-md-6 col-lg-6 col-xl-6">
+                                                    <a href="{{ asset('assets/sample/files/AfaqSample-Ecom.csv') }}"
+                                                       download class="text-hover-primary fs-5 fw-bolder mb-2">
+                                                        <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
+                                                            {{--                                                        <img src="{{ asset('assets/media/svg/files/upload.svg') }}" class="" alt=""/>--}}
+                                                            <i class="fa fa-download mb-4" aria-hidden="true" style="font-size: xxx-large;"></i>
+                                                            Download Sample File
+                                                        </div>
+                                                    </a>
+                                                </div>
                                             </div>
-                                            <div class="col-md-6 col-lg-6 col-xl-6">
-                                                <!--begin::Card-->
-                                                <a href="#" class="text-hover-primary fs-5 fw-bolder mb-2" data-bs-toggle="modal"
-                                                   data-bs-target="#kt_modal_share_earn">
-                                                    <div class="card h-100 flex-center bg-light-primary border-primary border border-dashed p-8">
-                                                        <img src="{{ asset('assets/media/svg/files/upload.svg') }}" class="" alt=""/>
-                                                        Create New Folder
-                                                    </div>
-                                                </a>
-                                                <!--end::Card-->
-                                            </div>
-
-                                        </div>
-                                        <!--end::Wrapper-->
+                                        </form>
                                     </div>
-                                    <!--end::Team-->
                                 </div>
-                                <!--end::Body-->
                             </div>
-                            <!--end::About card-->
+
+                            <div class="card">
+                                <div class="card-body">
+                                    <form id="csv-order-data" style="overflow-y: auto">
+
+                                    <table id="resultTable" border="1" style="width:100%; margin-top:20px;">
+                                        <thead>
+                                        <tr id="tableHead">
+                                            <!-- Column headers will be inserted here -->
+                                            <th>Category</th>
+                                            <th>Vendor Name</th>
+                                            <th>Vendor Name</th>
+                                            <th>Vendor Name</th>
+                                            <th>Vendor Name</th>
+                                            <th>Description</th>
+                                            <th>Tracking Id</th>
+                                            <th>Customer Name</th>
+                                            <th>Customer Phone</th>
+                                            <th>Customer Email</th>
+                                            <th>Customer Address</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody id="tableBody">
+                                        <!-- Data will be inserted here -->
+                                        </tbody>
+                                    </table>
+                                        <button type="button" id="process-order" class="btn btn-Primary">Process Orders</button>
+                                    </form>
+
+                                </div>
+                            </div>
+
+
                         </div>
-                        <!--end::Row-->
-
                     </div>
-                    <!--end::Tab pane-->
-
                 </div>
                 <!--end::Tab Content-->
             </div>
@@ -201,32 +250,78 @@
 
 @section('scripts')
     <script>
-        document.getElementById('img-sbmt-btn').addEventListener('click', function () {
-            var csrfToken = $('meta[name="csrf-token"]').attr('content');
-            var formData = new FormData($('#images-form')[0]);
-            // Make an AJAX request
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('admin.folder.images.store') }}', // Replace with your server endpoint
-                data: formData,
-                processData: false,  // Prevent jQuery from automatically transforming the data into a query string
-                contentType: false,  // Prevent jQuery from automatically setting the Content-Type header
-                beforeSend: function (xhr) {
-                    xhr.setRequestHeader('X-CSRF-Token', csrfToken);
 
+        document.getElementById('csvFile').addEventListener('change', function () {
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
+            var formData = new FormData($('#csv-order-form')[0]);
+            formData.append('csvFile', $(this)[0].files[0]);
+
+            $.ajax({
+                url: '{{ route("admin.orders.csv.store") }}',
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken
                 },
                 success: function (response) {
-                    // Handle the successful response
+                    console.log('File uploaded successfully!');
+                    // Handle success response
+                    populateTable(response);
+                },
+                error: function (xhr, status, error) {
+                    console.error('Error uploading file!');
+                    // Handle error response
+                }
+            });
+        });
+
+        function populateTable(data) {
+            // Clear existing table data
+            // $('#tableHead').empty();
+            $('#tableBody').empty();
+
+            // Create table headers
+            if (data.length > 0) {
+                var headers = data[0];
+                var headerRow = $('<tr>');
+                for (var i = 0; i < headers.length; i++) {
+                    headerRow.append('<th>' + 'Column' + (i + 1) + '</th>'); // Using Column1, Column2, etc. as headers
+                }
+                // $('#tableHead').append(headerRow);
+            }
+
+            // Populate the table with new data
+            data.forEach(function (row) {
+                var rowElement = $('<tr>');
+                row.forEach(function (cell, index) {
+                    rowElement.append('<td><input type="text" name="column' + (index + 1) + '[]" value="' + cell + '"></td>');
+                });
+                $('#tableBody').append(rowElement);
+            });
+        }
+
+        document.getElementById('process-order').addEventListener('click', function () {
+            var csrfToken = $('meta[name="csrf-token"]').attr('content');
+
+            var formData = $('#csv-order-data').serialize();
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('admin.orders.csv.process') }}', // Replace with your server endpoint
+                data: formData,
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader('X-CSRF-Token', csrfToken);
+                },
+                success: function (response) {
                     Swal.fire({
                         title: "Good job!",
-                        text: "You have successfully upload your image",
+                        text: "You have successfully processed the order",
                         icon: "success"
                     });
-                    $('#images-div').load(window.location.href + ' #images-div');
-                    $('#kt_modal_new_target').modal('hide');
                 },
                 error: function (error) {
-                    // Handle errors
                     console.error('Error submitting form:', error);
                 }
             });

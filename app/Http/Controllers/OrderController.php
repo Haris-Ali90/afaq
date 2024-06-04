@@ -104,6 +104,45 @@ class OrderController extends Controller
         return view('admin.orders.csv');
     }
 
+    public function orderCreationCSVStore(Request $request)
+    {
+
+        $file = $request->file('csvFile');
+
+        if ($file) {
+            $csvData = $this->readCsvFile($file->getPathname());
+            return response()->json($csvData);
+        } else {
+            return response()->json(['error' => 'No file uploaded'], 400);
+        }
+
+    }
+
+    private function readCsvFile($filePath)
+    {
+        $csvData = [];
+
+        if (($handle = fopen($filePath, "r")) !== FALSE) {
+            $firstRowSkipped = false; // Flag to skip the first row
+            while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
+                if (!$firstRowSkipped) {
+                    $firstRowSkipped = true;
+                    continue; // Skip the first row
+                }
+                $csvData[] = $data;
+            }
+            fclose($handle);
+        }
+
+        return $csvData;
+    }
+
+    public function orderCreationCSVProcess(Request $request)
+    {
+//        dd($request->all());
+    }
+
+
     public function getCountryIdOrCreation($countryName)
     {
         $country = Country::where('name', $countryName)->orWhere('code', $countryName)->first();
