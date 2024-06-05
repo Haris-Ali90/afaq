@@ -1,7 +1,14 @@
 @extends('admin.partial.main')
 
 @section('styles')
-
+    <style>
+        #csv-order-data{
+            overflow-y: auto;
+        }
+        .steps-div{
+            margin-left: 4%;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -39,28 +46,28 @@
                                             images to get view and shareable to multiple user
                                         </div>
                                         <div class="h-8px bg-light rounded mb-3">
-                                            <div class="bg-success rounded h-8px" role="progressbar" style="width: 88%;"
-                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="bg-success rounded h-8px" role="progressbar" style="width: 33%;"
+                                                 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" id="progress-bar"></div>
                                         </div>
                                     </div>
 
                                 </div>
                                 <div class="flex-wrap justify-content-start">
-                                    <div class="d-flex flex-wrap">
+                                    <div class="d-flex flex-wrap steps-div">
                                         {{--                                        <div class="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">--}}
                                         {{--                                            <div class="d-flex align-items-center">--}}
                                         {{--                                                <div class="fs-4 fw-bolder"></div>--}}
                                         {{--                                            </div>--}}
                                         {{--                                            <div class="fw-bold fs-6 text-gray-400">Due Date</div>--}}
                                         {{--                                        </div>--}}
-                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                        <div class="col-md-3 col-lg-3 col-xxl-3 pr-2">
                                             <label
                                                 class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6 active"
-                                                data-kt-button="true">
+                                                data-kt-button="true" id="step-one">
                                                 <span
                                                     class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
                                                     <input class="form-check-input" type="radio" name="usage" value="1"
-                                                           checked="checked">
+                                                           checked="checked" id="step-one-radio">
                                                 </span>
                                                 <span class="ms-5">
                                                     <span class="fs-4 fw-bolder mb-1 d-block">Step One</span>
@@ -70,48 +77,45 @@
                                         </div>
                                         <div class="col-md-1"></div>
 
-                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+{{--                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">--}}
+{{--                                            <label--}}
+{{--                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"--}}
+{{--                                                data-kt-button="true">--}}
+{{--                                                <span--}}
+{{--                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">--}}
+{{--                                                    <input class="form-check-input" type="radio" name="usage" value="1">--}}
+{{--                                                </span>--}}
+{{--                                                <span class="ms-5">--}}
+{{--                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step Two</span>--}}
+{{--                                                    <span class="fw-bold fs-7 text-gray-600">Validate Orders</span>--}}
+{{--                                                </span>--}}
+{{--                                            </label>--}}
+{{--                                        </div>--}}
+{{--                                        <div class="col-md-1"></div>--}}
+
+                                        <div class="col-md-3 col-lg-3 col-xxl-3 pr-2">
                                             <label
                                                 class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
-                                                data-kt-button="true">
+                                                data-kt-button="true" id="step-two">
                                                 <span
                                                     class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1"
-                                                           checked="checked">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1" id="step-two-radio">
                                                 </span>
                                                 <span class="ms-5">
                                                     <span class="fs-4 fw-bolder mb-1 d-block">Step Two</span>
-                                                    <span class="fw-bold fs-7 text-gray-600">Validate Orders</span>
-                                                </span>
-                                            </label>
-                                        </div>
-                                        <div class="col-md-1"></div>
-
-                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
-                                            <label
-                                                class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
-                                                data-kt-button="true">
-                                                <span
-                                                    class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1"
-                                                           checked="checked">
-                                                </span>
-                                                <span class="ms-5">
-                                                    <span class="fs-4 fw-bolder mb-1 d-block">Step Three</span>
                                                     <span class="fw-bold fs-7 text-gray-600">Processing Orders</span>
                                                 </span>
                                             </label>
                                         </div>
                                         <div class="col-md-1"></div>
 
-                                        <div class="col-md-2 col-lg-2 col-xxl-2 pr-2">
+                                        <div class="col-md-3 col-lg-3 col-xxl-3 pr-2">
                                             <label
                                                 class="btn btn-outline btn-outline-dashed btn-outline-default d-flex text-start p-6"
-                                                data-kt-button="true">
+                                                data-kt-button="true" id="step-three">
                                                 <span
                                                     class="form-check form-check-custom form-check-solid form-check-sm align-items-start mt-1">
-                                                    <input class="form-check-input" type="radio" name="usage" value="1"
-                                                           checked="checked">
+                                                    <input class="form-check-input" type="radio" name="usage" value="1" id="step-three-radio">
                                                 </span>
                                                 <span class="ms-5">
                                                     <span class="fs-4 fw-bolder mb-1 d-block">Step Four</span>
@@ -176,7 +180,7 @@
                 <div class="tab-content">
                     <div id="kt_project_users_card_pane" class="tab-pane fade show active">
                         <div id="kt_content_container" class="container-xxl">
-                            <div class="card">
+                            <div class="card" id="upload-orders-div">
                                 <div class="card-body">
                                     <div class="" id="images-div">
                                         <form id="csv-order-form" class="form" enctype="multipart/form-data">
@@ -207,9 +211,9 @@
                                 </div>
                             </div>
 
-                            <div class="card">
+                            <div class="card" id="orders-table-div" style="display: none">
                                 <div class="card-body">
-                                    <form id="csv-order-data" style="overflow-y: auto">
+                                    <form id="csv-order-data">
 
                                     <table id="resultTable" border="1" style="width:100%; margin-top:20px;">
                                         <thead>
@@ -232,9 +236,33 @@
                                         <!-- Data will be inserted here -->
                                         </tbody>
                                     </table>
-                                        <button type="button" id="process-order" class="btn btn-Primary">Process Orders</button>
-                                    </form>
 
+                                    </form>
+                                    <button type="button" id="process-order" class="btn btn-primary px-6">Process Orders</button>
+                                </div>
+                            </div>
+
+
+                            <div class="card" id="confirmation-div" style="display: none">
+                                <div class="card-body">
+                                    <div class="" id="images-div">
+                                            <div class="row">
+                                                <div class="pt-lg-10 mb-10">
+                                                    <!--begin::Logo-->
+                                                    <h1 class="fw-bolder fs-2qx text-gray-800 mb-7 text-center">Thank You For Order</h1>
+                                                    <!--end::Logo-->
+                                                    <!--begin::Message-->
+                                                    <div class="fw-bold fs-3 text-muted mb-15 text-center">Thank you for your order! Your support of small businesses.
+                                                        <br /> (ours especially!) is much appreciated.</div>
+                                                    <!--end::Message-->
+                                                    <!--begin::Action-->
+                                                    <div class="text-center">
+                                                        <a href="../../demo1/dist/index.html" class="btn btn-lg btn-primary fw-bolder">Go to order list</a>
+                                                    </div>
+                                                    <!--end::Action-->
+                                                </div>
+                                            </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -266,9 +294,31 @@
                     'X-CSRF-TOKEN': csrfToken
                 },
                 success: function (response) {
-                    console.log('File uploaded successfully!');
                     // Handle success response
                     populateTable(response);
+                    var labelone = document.getElementById("step-one");
+                    labelone.classList.remove("active");
+
+                    var labeltwo = document.getElementById("step-two");
+                    labeltwo.classList.add("active");
+
+                    var stepOneRadio = document.getElementById("step-one-radio");
+                    stepOneRadio.checked = false;
+
+                    var stepTwoRadio = document.getElementById("step-two-radio");
+                    stepTwoRadio.checked = true;
+
+                    var progressbarDiv = document.getElementById("progress-bar");
+                    progressbarDiv.removeAttribute("style");
+                    progressbarDiv.setAttribute("style", "width: 66%");
+
+                    var OrdersTableDiv = document.getElementById("orders-table-div");
+                    var uploadsOrderDiv = document.getElementById("upload-orders-div");
+
+                    OrdersTableDiv.style.display = 'block';
+                    uploadsOrderDiv.style.display = 'none';
+
+
                 },
                 error: function (xhr, status, error) {
                     console.error('Error uploading file!');
@@ -320,6 +370,28 @@
                         text: "You have successfully processed the order",
                         icon: "success"
                     });
+
+                    var progressbarDiv = document.getElementById("progress-bar");
+                    progressbarDiv.removeAttribute("style");
+                    progressbarDiv.setAttribute("style", "width: 100%");
+
+                    var labeltwo = document.getElementById("step-two");
+                    labeltwo.classList.remove("active");
+
+                    var labelthree = document.getElementById("step-three");
+                    labelthree.classList.add("active");
+
+                    var stepTwoRadio = document.getElementById("step-two-radio");
+                    stepTwoRadio.checked = false;
+
+                    var stepThreeRadio = document.getElementById("step-three-radio");
+                    stepThreeRadio.checked = true;
+
+                    var OrdersTableDiv = document.getElementById("orders-table-div");
+                    var ConfirmationDiv = document.getElementById("confirmation-div");
+
+                    ConfirmationDiv.style.display = 'block';
+                    OrdersTableDiv.style.display = 'none';
                 },
                 error: function (error) {
                     console.error('Error submitting form:', error);

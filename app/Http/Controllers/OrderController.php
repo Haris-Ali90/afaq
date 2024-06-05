@@ -140,6 +140,64 @@ class OrderController extends Controller
     public function orderCreationCSVProcess(Request $request)
     {
 //        dd($request->all());
+        foreach($request->column1 as $key => $column){
+            $user = auth()->user();
+            $category = OrderCategory::create(['name' => $request->column1[$key]]);
+
+            $sprintContact = SprintContact::create([
+                'name' => $request->column2[$key],
+                'phone' => $request->column3[$key],
+                'email' => $request->column4[$key],
+            ]);
+
+            $location = Location::create([
+                'address' => $request->column5[$key],
+                'city_id' => 1,
+                'state_id' => 1,
+                'country_id' => 1,
+            ]);
+            $sprint = [
+                'creator_id' => $user->id,
+                'creator_type' => 'vendor',
+                'vehicle_id' => 3,
+                'status_id' => 61,
+            ];
+            $sprint = Sprint::create($sprint);
+
+            $pickupTask = [
+                'sprint_id' => $sprint->id,
+                'ordinal' => 1,
+                'type' => 'pickup',
+                'location_id' => $location->id,
+                'contact_id' => $sprintContact->id,
+                'status_id' => 61,
+            ];
+            Task::create($pickupTask);
+
+            $sprintContactDrop = SprintContact::create([
+                'name' => $request->column8[$key],
+                'phone' => $request->column9[$key],
+                'email' => $request->column10[$key],
+            ]);
+
+            $locationDrop = Location::create([
+                'address' => $request->column11[$key],
+                'city_id' => 1,
+                'state_id' => 1,
+                'country_id' => 1,
+            ]);
+
+            $dropOffTask = [
+                'sprint_id' => $sprint->id,
+                'ordinal' => 2,
+                'type' => 'dropoff',
+                'location_id' => $locationDrop->id,
+                'contact_id' => $sprintContactDrop->id,
+                'status_id' => 61,
+            ];
+            Task::create($dropOffTask);
+        }
+
     }
 
 
