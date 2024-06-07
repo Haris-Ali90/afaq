@@ -239,6 +239,7 @@ class OrderController extends Controller
 
     public function pending(Request $request)
     {
-
+        $orders = Sprint::all();
+        return view('admin.orders.order_list', compact('orders'));
     }
 }
