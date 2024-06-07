@@ -139,7 +139,6 @@ class OrderController extends Controller
 
     public function orderCreationCSVProcess(Request $request)
     {
-//        dd($request->all());
         foreach($request->column1 as $key => $column){
             $user = auth()->user();
             $category = OrderCategory::create(['name' => $request->column1[$key]]);
@@ -240,6 +239,6 @@ class OrderController extends Controller
 
     public function pending(Request $request)
     {
-        
+
     }
 }
