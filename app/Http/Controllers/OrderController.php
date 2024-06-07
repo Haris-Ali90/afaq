@@ -200,7 +200,6 @@ class OrderController extends Controller
 
     }
 
-
     public function getCountryIdOrCreation($countryName)
     {
         $country = Country::where('name', $countryName)->orWhere('code', $countryName)->first();
@@ -237,5 +236,10 @@ class OrderController extends Controller
 
         // If the file upload fails
 //        return response()->json(['error' => 'File upload failed'], 500);
+    }
+
+    public function pending(Request $request)
+    {
+        
     }
 }
