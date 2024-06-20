@@ -27,7 +27,5 @@ Route::post('admin/order/csv/store', [App\Http\Controllers\OrderController::clas
 Route::post('admin/order/csv/process', [App\Http\Controllers\OrderController::class, 'orderCreationCSVProcess'])->name('admin.orders.csv.process');
 
 Route::get('admin/order/pending', [App\Http\Controllers\OrderController::class, 'pending'])->name('admin.orders.pending');
+Route::get('admin/profile/view', [App\Http\Controllers\ProfileController::class, 'index'])->name('admin.profile.view');
 
-Route::post('admin/folder/store', [App\Http\Controllers\FolderController::class, 'store'])->name('admin.folder.store');
-Route::get('admin/folder/images/{folder}', [App\Http\Controllers\FolderController::class, 'folderImage'])->name('admin.folder.images.index');
-Route::post('admin/folder/images/store', [App\Http\Controllers\FolderController::class, 'submitFolderImages'])->name('admin.folder.images.store');

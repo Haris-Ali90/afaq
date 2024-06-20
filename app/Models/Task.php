@@ -13,4 +13,14 @@ class Task extends Model
 
     protected $guarded=[];
 
+    public function locations()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
+    public function contacts()
+    {
+        return $this->belongsTo(SprintContact::class);
+    }
+
 }
