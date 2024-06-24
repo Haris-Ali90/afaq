@@ -28,4 +28,5 @@ Route::post('admin/order/csv/process', [App\Http\Controllers\OrderController::cl
 
 Route::get('admin/order/pending', [App\Http\Controllers\OrderController::class, 'pending'])->name('admin.orders.pending');
 Route::get('admin/profile/view', [App\Http\Controllers\ProfileController::class, 'index'])->name('admin.profile.view');
+Route::post('admin/profile/update', [App\Http\Controllers\ProfileController::class, 'update'])->name('admin.profile.update');
 

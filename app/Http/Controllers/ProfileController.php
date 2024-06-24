@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Folder;
 use App\Models\FolderImage;
+use App\Models\User;
 use DateInterval;
 use DateTime;
 use Illuminate\Http\Request;
@@ -33,20 +34,16 @@ class ProfileController extends Controller
         return view('admin.profile.index', compact('user'));
     }
 
-    public function store(Request $request)
+    public function update(Request $request)
     {
-        $currentDate = new DateTime(); // Current date and time
-        $currentDate->add(new DateInterval('P20D')); // Add 20 days
-
-        $newDate = $currentDate->format('Y-m-d');
-        $folder = Folder::create([
-            'name' => $request->name,
-            'slug' => Str::slug($request->name),
-            'link' => $request->link,
-            'folder_type' => 'free',
-            'folder_limit' => 20,
-            'due_date' => $newDate,
-        ]);
+        $data= [
+            'first_name' => $request->fname,
+            'last_name' => $request->lname,
+            'user_name' => $request->company,
+            'email' => $request->website
+        ];
+        User::where('id', auth()->user()->id)->update($data);
+        return redirect()->route('admin.profile.view');
     }
 
     public function folderImage(Folder $folder)
